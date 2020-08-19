@@ -81,3 +81,8 @@ p.MuiFormHelperText-root.MuiFormHelperText-contained {
 .MuiSvgIcon-root.scrollTop {
   float: right;
 }
+.MuiToolbar-root.MuiToolbar-regular.MuiToolbar-gutters {
+  padding-right: 5;
+  padding-left: 5;
+
+}

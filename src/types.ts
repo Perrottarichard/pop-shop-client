@@ -65,5 +65,6 @@ export interface Order {
   totalPrice: number | undefined;
   confirmation: string | undefined;
   user: User | undefined;
+  date: string;
   id: string | undefined;
 }

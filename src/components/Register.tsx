@@ -127,7 +127,7 @@ const Register = () => {
           variables: {
             firstName: firstName,
             lastName: lastName,
-            email: email,
+            email: email.toLowerCase(),
             password: password,
             favoriteFlavor: selectedFavoriteFlavor
           }

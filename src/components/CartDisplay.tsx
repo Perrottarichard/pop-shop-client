@@ -62,9 +62,9 @@ const CartDisplay = () => {
       <div style={{ backgroundColor: bg, width: '100%' }}>
         {/* hacky way to avoid error on view change */}
         <div id='timer' style={{ display: 'none', color: txt }}></div>
-        <Container style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-evenly', height: 'auto', width: '100vw', padding: 0, marginLeft: 0 }}>
+        <Container style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-evenly', height: 'auto', width: '100%', textAlign: 'center' }}>
           {cart.map(c =>
-            <Container key={c.id} style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-evenly', maxWidth: '360px', marginTop: '20px', marginBottom: '20px', textAlign: 'center', paddingLeft: 0 }}>
+            <Container key={c.id} style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-evenly', maxWidth: '360px', marginTop: '20px', marginBottom: '20px', textAlign: 'center' }}>
               <Fade in={!thisUserCart.loading} >
                 <Paper elevation={5} style={{ backgroundColor: blk, width: 360, height: 200 }}>
                   <div>

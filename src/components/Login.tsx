@@ -94,7 +94,7 @@ const Login = () => {
 
   const submitLogin = async (event: React.SyntheticEvent) => {
     event.preventDefault()
-    login({ variables: { email: email, password: password } })
+    login({ variables: { email: email.toLowerCase(), password: password } })
   }
   const classes = useStyles();
 

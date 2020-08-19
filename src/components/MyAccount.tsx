@@ -26,17 +26,18 @@ const MyAccount = () => {
       <div id="timer" style={{ display: 'none', color: 'white' }}></div>
       <Container style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-evenly', height: 'auto', width: '100%', padding: 0 }}>
         {orders.map(o =>
-          <Container key={o.id} style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-evenly', maxWidth: '360px', marginTop: '20px', marginBottom: '20px', textAlign: 'left', backgroundColor: blk, padding: 0 }}>
+          // <Paper elevation={5} style={{ backgroundColor: blk, width: 'auto', height: 'auto' }}></Paper>
+          <Container key={o.id} style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-evenly', maxWidth: '360px', marginTop: '20px', marginBottom: '20px', textAlign: 'left', backgroundColor: blk, paddingLeft: 10 }}>
             <div>
-              {/* <Paper elevation={5} style={{ backgroundColor: blk, width: 'auto', height: 'auto' }}> */}
               <Grid container >
                 <Grid item xs>
-                  <Typography variant="h6" style={{ fontFamily: 'ubuntu', color: txt }}>
-                    Order Confirmation: {o.confirmation}
+                  <Typography variant="h6" style={{ fontFamily: 'ubuntu', color: txt, marginTop: 10 }}>
+                    Order Confirmation: {o.confirmation}<br />
+                    Date: {new Date(+o.date).toString().slice(0, 25)}
                   </Typography>
                   <Typography gutterBottom variant="h6" style={{ fontFamily: 'ubuntu', color: txt, marginTop: 10 }}>
                     {o.cart?.map(c =>
-                      <div>
+                      <div key={c.id}>
                         <Typography style={{ color: txt, fontFamily: 'ubuntu' }} variant="body2">
                           product type: {c.item?.type}<br />
                         brand: {c.item?.brand.name} <br />
@@ -48,15 +49,14 @@ const MyAccount = () => {
                       </div>
 
                     )}
-                    total: ${o.totalPrice} <br />
+                    Total Billed: ${o.totalPrice} <br />
                   </Typography>
                 </Grid>
               </Grid>
-              {/* </Paper> */}
             </div>
           </Container >
-        )}
 
+        )}
       </Container >
     </div>
   )

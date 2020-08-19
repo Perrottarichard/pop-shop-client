@@ -28,13 +28,15 @@ const useStyles = makeStyles((theme: Theme) =>
     grow: {
       flexGrow: 1,
       color: 'white',
+      marginTop: 0,
+      width: '100%'
     },
     menuButton: {
       marginRight: theme.spacing(2),
     },
     title: {
       display: 'block',
-      padding: '0',
+      padding: '5',
       overflow: 'visible',
       fontFamily: 'Pacifico',
       color: 'white',
@@ -54,7 +56,7 @@ const useStyles = makeStyles((theme: Theme) =>
       },
       marginRight: theme.spacing(2),
       marginLeft: 0,
-      width: '100%',
+      width: '300px',
       [theme.breakpoints.up('sm')]: {
         marginLeft: theme.spacing(3),
         width: 'auto',
@@ -77,9 +79,9 @@ const useStyles = makeStyles((theme: Theme) =>
       // vertical padding + font size from searchIcon
       paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
       transition: theme.transitions.create('width'),
-      width: '100%',
+      width: '100px',
       [theme.breakpoints.up('md')]: {
-        width: '20ch',
+        width: '300px',
       },
     },
     sectionDesktop: {
@@ -180,7 +182,7 @@ const PrimarySearchAppBar = () => {
       onClose={handleMenuClose}
     >
 
-      <MenuItem onClick={toAccount}>My account</MenuItem>
+      <MenuItem onClick={toAccount}>My Orders</MenuItem>
       <MenuItem onClick={logout}>Sign out</MenuItem>
     </Menu>
   );
@@ -213,7 +215,7 @@ const PrimarySearchAppBar = () => {
         >
           <AccountCircle />
         </IconButton>
-        <p>My Account</p>
+        <p>My Orders</p>
       </MenuItem>
       <MenuItem onClick={logout}>
         <IconButton
@@ -230,7 +232,7 @@ const PrimarySearchAppBar = () => {
   );
   return (
     <div className={classes.grow}>
-      <AppBar position="static" style={{ backgroundColor: '#2b2b29', fontFamily: 'Pacifico' }}>
+      <AppBar position="static" style={{ backgroundColor: '#2b2b29', fontFamily: 'Pacifico', width: '100%', marginTop: 0 }}>
         <Toolbar>
           <Button className={classes.title} href='/'>
             Pop Shop!
@@ -284,7 +286,7 @@ const PrimarySearchAppBar = () => {
           </div>
           <div className={classes.sectionMobile}>
             {(!token) ?
-              <IconButton aria-label="login" color="inherit" href='/login' style={{ fontFamily: 'Pacifico', fontSize: '16px', paddingLeft: '0', marginLeft: '0', paddingRight: '0' }}>
+              <IconButton aria-label="login" color="inherit" href='/login' style={{ fontFamily: 'Pacifico', fontSize: '16px', paddingLeft: '0', marginLeft: '0', paddingRight: '5' }}>
                 {location.pathname === '/login' ? null : 'Sign in'}
               </IconButton>
               :

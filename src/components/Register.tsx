@@ -79,7 +79,7 @@ const Register = () => {
   const [confirmPassword, setConfirmPassword] = useState('')
   const [selectedFavoriteFlavor, setSelectedFavoriteFlavor] = useState('');
   const history = useHistory()
-  const bg = '#cf2b2b'
+  // const bg = '#cf2b2b'
   const txt = 'white'
   const blk = 'rgb(43, 43, 41)'
 

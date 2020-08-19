@@ -62,7 +62,7 @@ export default function Review(props: ChProps) {
       <List disablePadding>
         {cart.map((product) => (
           <ListItem className={classes.listItem} key={product.id}>
-            <ListItemText primary={product.item?.brand.name + ' -- ' + `${product.item?.type === 'drink' ? product.flavor : product.color}`} />
+            <ListItemText primary={`${product.item?.brand.name} ${product.item?.type === 'drink' ? product.flavor : product.color}`} />
             <Typography variant="body2">${product.price.toFixed(2)}</Typography>
           </ListItem>
         ))}

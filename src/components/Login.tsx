@@ -59,7 +59,7 @@ const Login = () => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const history = useHistory()
-  const bg = '#cf2b2b'
+  // const bg = '#cf2b2b'
   const txt = 'white'
   const blk = 'rgb(43, 43, 41)'
 

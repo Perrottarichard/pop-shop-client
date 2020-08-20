@@ -16,6 +16,16 @@ Although arbitrary, the products are an assortment of popular soft drinks from a
 | React Router | routing |
 | Material UI | styling |
 
+## Client Features
+* Token authentication / caching
+* Pre-filled forms at checkout using data from previous purchase
+* 'Deals of the Day' promotion countdown
+* Recommended products based on user's chosen flavor
+* Search products by brand or flavor
+* Sort products by price or alphabetically
+* View recent orders
+* Add / remove items from cart
+
 
 ### Note: Although responsive, the UI is mainly card-based and designed for mobile
 

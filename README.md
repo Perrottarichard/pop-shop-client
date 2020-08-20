@@ -22,16 +22,28 @@ Although arbitrary, the products are an assortment of popular soft drinks from a
 ## UI (mobile)
 ![Alt text](https://raw.github.com/perrottarichard/pop-shop-client/master/screenshotMobile/mobilehome.png)
 ![Alt text](https://raw.github.com/perrottarichard/pop-shop-client/master/screenshotMobile/mobilemenu.png)
+
+## Cart
 ![Alt text](https://raw.github.com/perrottarichard/pop-shop-client/master/screenshotMobile/mobilecart.png)
+
+## Search
 ![Alt text](https://raw.github.com/perrottarichard/pop-shop-client/master/screenshotMobile/mobilesearch.png)
+
+## Sign in / Sign up
 ![Alt text](https://raw.github.com/perrottarichard/pop-shop-client/master/screenshotMobile/mobilesignin.png)
 ![Alt text](https://raw.github.com/perrottarichard/pop-shop-client/master/screenshotMobile/mobilesignup.png)
+
+## Checkout / Order Confirmation
 ![Alt text](https://raw.github.com/perrottarichard/pop-shop-client/master/screenshotMobile/mobilecheckout.png)
 ![Alt text](https://raw.github.com/perrottarichard/pop-shop-client/master/screenshotMobile/mobileorderconfimation.png)
 
 ## UI (desktop)
 ![Alt text](https://raw.github.com/perrottarichard/pop-shop-client/master/screenshotDesktop/home.png)
+
+## Cart
 ![Alt text](https://raw.github.com/perrottarichard/pop-shop-client/master/screenshotDesktop/cart.png)
+
+## Three-step Checkout
 ![Alt text](https://raw.github.com/perrottarichard/pop-shop-client/master/screenshotDesktop/checkout1.png)
 ![Alt text](https://raw.github.com/perrottarichard/pop-shop-client/master/screenshotDesktop/checkout2.png)
 ![Alt text](https://raw.github.com/perrottarichard/pop-shop-client/master/screenshotDesktop/checkout3.png)

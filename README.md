@@ -27,7 +27,7 @@ Although arbitrary, the products are an assortment of popular soft drinks from a
 ![Alt text](https://raw.github.com/perrottarichard/pop-shop-client/master/screenshotMobile/mobilesignin.png)
 ![Alt text](https://raw.github.com/perrottarichard/pop-shop-client/master/screenshotMobile/mobilesignup.png)
 ![Alt text](https://raw.github.com/perrottarichard/pop-shop-client/master/screenshotMobile/mobilecheckout.png)
-![Alt text](https://raw.github.com/perrottarichard/pop-shop-client/master/screenshotMobile/mobileorderconfirmation.png)
+![Alt text](https://raw.github.com/perrottarichard/pop-shop-client/master/screenshotMobile/mobileorderconfimation.png)
 
 ## UI (desktop)
 ![Alt text](https://raw.github.com/perrottarichard/pop-shop-client/master/screenshotDesktop/home.png)

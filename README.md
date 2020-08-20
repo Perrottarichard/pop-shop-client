@@ -9,6 +9,8 @@ https://pop-shop.netlify.app
 The server is hosted at:
 https://pop-shop-server.herokuapp.com
 
+View the server repository here: https://github.com/Perrottarichard/pop-shop-server
+
 Although arbitrary, the products are an assortment of popular soft drinks from around the world, as well as branded t-shirts.  Placeholder text and images were used where, if this were a live application, professionally written copy and product images would be.
 
 ## Core Technologies

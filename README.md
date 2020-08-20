@@ -1,7 +1,7 @@
 
 # Pop-Shop Demo (client)
 
-This project is the client side of a demo, full-stack Typescript/NodeJS e-commerce web app.
+This project is the client side of a demo, full-stack Typescript/NodeJS e-commerce web app. The client is written in Typescript
 
 The client is hosted at:
 https://pop-shop.netlify.app
@@ -16,10 +16,11 @@ Although arbitrary, the products are an assortment of popular soft drinks from a
 ## Core Technologies
 | Technology  | For |
 | ------------| -------|
+| React | UI building, state management (Context API)
 | Apollo Client | state management, data fetching, caching |
 | GraphQL | data management |
 | React Router | routing |
-| Material UI | styling |
+| Material UI / CSS | styling |
 
 ## Client Features
 * Token authentication / caching

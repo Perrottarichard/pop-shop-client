@@ -241,8 +241,15 @@ const TShirtDisplay = () => {
               </FormControl>
               <Chip className={classes.chip} label={(p.id === idSelection) ? sizeSelection : null} variant='outlined' style={{ width: 50 }} />
               <div style={{ marginTop: '20px', display: 'block', textAlign: 'center' }}>
-                <Button variant='contained' size="medium" style={{ color: txt, backgroundColor: bg }} endIcon={<AddShoppingCartIcon style={{ fontSize: '20px' }} />} onClick={addToCart}>
-                  {(updatingCart && p.id === idSelection) ? 'Updating...' : 'Add to Cart'}</Button>
+                <Button
+                  variant='contained'
+                  disabled={updatingCart && p.id === idSelection ? true : false}
+                  size="medium" style={{ color: txt, backgroundColor: bg }}
+                  endIcon={<AddShoppingCartIcon
+                    style={{ fontSize: '20px' }} />}
+                  onClick={addToCart}>
+                  {(updatingCart && p.id === idSelection) ? 'Updating...' : 'Add to Cart'}
+                </Button>
               </div>
               <div style={{ display: 'block', justifyContent: 'right' }}>
                 {window.screen.width <= 500 ? <ScrollArrow /> : null}

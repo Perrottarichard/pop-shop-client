@@ -2,8 +2,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { useContext } from 'react';
 import { useLocation } from 'react-router-dom'
-import { Theme, createStyles, makeStyles } from '@material-ui/core/styles';
-// import Placeholder from '../assets/placeholder.jpg';
+import { createStyles, makeStyles } from '@material-ui/core/styles';
 import Soda from '../assets/soft-drink.jpeg'
 import Shirts from '../assets/shirts.png'
 import DOD from '../assets/dod.png'
@@ -15,7 +14,7 @@ import SearchTShirtDisplay from './SearchTShirtDisplay';
 import { Product } from '../types';
 
 
-const useStyles = makeStyles((theme: Theme) =>
+const useStyles = makeStyles(() =>
   createStyles({
     root: {
       display: 'flex',
@@ -24,29 +23,11 @@ const useStyles = makeStyles((theme: Theme) =>
       overflow: 'hidden',
       backgroundColor: '#cf2b2b',
       minWidth: '280px',
-      // maxWidth: '1000px',
       fontFamily: 'Pacifico'
     }
   })
 );
 
-/**
- * The example data is structured as follows:
- *
- * import image from 'path/to/image.jpg';
- * [etc...]
- *
- * const tileData = [
- *   {
- *     img: image,
- *     title: 'Image',
- *     author: 'author',
- *   },
- *   {
- *     [etc...]
- *   },
- * ];
- */
 export default function CategoryMenu() {
   const classes = useStyles();
   const { search } = useContext(ProductContext)
@@ -109,14 +90,9 @@ export default function CategoryMenu() {
     }
   ]
 
-  // const test = products.filter(p => p.flavors.length > 0 ? p : null)
-  // const test2 = test.filter(p => p.flavors.some((f: any) => f.indexOf(search) !== -1))
-  // console.log(test2)
-
-
   if (search.length > 0) {
     const brandFilter = products.filter((d: any) => d.brand.name.toString().toLowerCase().indexOf(search.toLowerCase()) !== -1)
-    const flavorFilter = products.filter(p => p.flavors.some((f: any) => f.indexOf(search) !== -1))
+    const flavorFilter = products.filter(p => p.flavors.some((f: any) => f.indexOf(search.toLowerCase()) !== -1))
 
     const arr: Product[] = brandFilter.concat(flavorFilter)
     const uniqueSet = new Set(arr)
@@ -124,7 +100,14 @@ export default function CategoryMenu() {
     const drinks = products.filter(p => p.type === 'drink')
     const shirts = products.filter(p => p.type === 'TShirt')
 
-
+    if (drinks.concat(shirts).length === 0) {
+      return (
+        <div style={{ display: 'block', textAlign: 'center' }}>
+          <div id='timer' style={{ display: 'none', color: 'white' }}></div>
+          <h6 style={{ fontSize: 20, marginTop: 20, fontFamily: 'ubuntu', color: 'white' }}>...No results</h6>
+        </div>
+      )
+    }
     return (
       <div style={{ backgroundColor: '#cf2b2b', height: '100vw', width: 'inherit' }}>
         <div id='timer' style={{ display: 'none', color: 'white' }}></div>

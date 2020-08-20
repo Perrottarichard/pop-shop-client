@@ -13,7 +13,7 @@ const MyAccount = () => {
   if (orderQuery.loading) {
     return (
       <div>
-        <div id="timer" style={{ display: 'none', color: 'white' }}></div>
+        <div id="timer" style={{ display: 'none', color: txt }}></div>
         <div style={{ backgroundColor: bg, height: '100vh', width: '100%' }}>
           <LinearProgress style={{ backgroundColor: 'black', zIndex: 1000, }} />
         </div>

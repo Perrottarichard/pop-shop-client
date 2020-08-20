@@ -90,6 +90,7 @@ export default function Checkout() {
   const [conf, setConf] = useState('')
   const [tryCreateOrder, result] = useMutation(CREATE_ORDER, { refetchQueries: [{ query: ME }] })
   const meQuery = useQuery(ME)
+  const [updating, setUpdating] = useState(false)
   const bg = '#cf2b2b'
   const txt = 'white'
   const blk = 'rgb(43, 43, 41)'
@@ -142,6 +143,7 @@ export default function Checkout() {
   };
   const submitCheckout = async () => {
     try {
+      setUpdating(true)
       await tryCreateOrder({
         variables: {
           formFirstName: formFirstName,
@@ -159,9 +161,10 @@ export default function Checkout() {
           confirmation: shortid.generate()
         }
       })
-      // console.log(result.data.createOrder.confirmation)
+      setUpdating(false)
       handleNext()
     } catch (error) {
+      setUpdating(false)
       console.log(error)
     }
   }
@@ -223,12 +226,13 @@ export default function Checkout() {
                         {activeStep === steps.length - 1 ?
                           <Button
                             variant="contained"
+                            disabled={updating ? true : false}
                             style={{ backgroundColor: bg }}
                             onClick={submitCheckout}
                             className={classes.button}
                           >
-                            Place order
-                      </Button>
+                            {updating ? 'Updating...' : 'Place Order'}
+                          </Button>
                           : null}
                       </div>
                     </React.Fragment>

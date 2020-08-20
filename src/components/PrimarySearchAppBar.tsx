@@ -17,10 +17,7 @@ import { Button, InputBase } from '@material-ui/core';
 import SearchIcon from '@material-ui/icons/Search';
 import { ProductContext } from '../contexts/ProductContext';
 import { GET_CART } from '../queries';
-// import { ALL_PRODUCTS } from '../queries';
-// import { Product } from '../types';
-// import { useQuery } from '@apollo/client';
-// import { GET_CART } from '../queries';
+import Tooltip from '@material-ui/core/Tooltip';
 
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -244,16 +241,18 @@ const PrimarySearchAppBar = () => {
               <div className={classes.searchIcon}>
                 <SearchIcon />
               </div>
-              <InputBase
-                placeholder="Search..."
-                classes={{
-                  root: classes.inputRoot,
-                  input: classes.inputInput,
-                }}
-                inputProps={{ 'aria-label': 'search' }}
-                value={search}
-                onChange={handleSearchChange}
-              />
+              <Tooltip title='Search by brand or flavor. When searching by flavor, only products with that available flavor will show' placement='bottom'>
+                <InputBase
+                  placeholder="Search..."
+                  classes={{
+                    root: classes.inputRoot,
+                    input: classes.inputInput,
+                  }}
+                  inputProps={{ 'aria-label': 'search' }}
+                  value={search}
+                  onChange={handleSearchChange}
+                />
+              </Tooltip>
             </div>
             :
             null

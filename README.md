@@ -20,8 +20,8 @@ Although arbitrary, the products are an assortment of popular soft drinks from a
 ### Note: Although responsive, the UI is mainly card-based and designed for mobile
 
 ## UI (mobile)
-![Alt text](https://raw.github.com/perrottarichard/pop-shop-client/screenshots/home.png)
-![Alt text](https://raw.github.com/perrottarichard/pop-shop-client/screenshots/home.png)
+![Alt text](https://raw.github.com/perrottarichard/pop-shop-client/screenshotMobile/mobilehome.png)
+![Alt text](https://raw.github.com/perrottarichard/pop-shop-client/screenshotMobile/mobilemenu.png)
 ![Alt text](https://raw.github.com/perrottarichard/pop-shop-client/screenshots/home.png)
 ![Alt text](https://raw.github.com/perrottarichard/pop-shop-client/screenshots/home.png)
 ![Alt text](https://raw.github.com/perrottarichard/pop-shop-client/screenshots/home.png)

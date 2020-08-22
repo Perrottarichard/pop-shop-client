@@ -69,7 +69,7 @@ export default function Review(props: ChProps) {
         <ListItem className={classes.listItem}>
           <ListItemText primary="Total" />
           <Typography variant="subtitle1" className={classes.total}>
-            ${total}
+            ${total.toFixed(2)}
           </Typography>
         </ListItem>
       </List>

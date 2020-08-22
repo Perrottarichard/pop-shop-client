@@ -49,7 +49,7 @@ const MyAccount = () => {
                       </div>
 
                     )}
-                    Total Billed: ${o.totalPrice} <br />
+                    Total Billed: ${o.totalPrice?.toFixed(2)} <br />
                   </Typography>
                 </Grid>
               </Grid>

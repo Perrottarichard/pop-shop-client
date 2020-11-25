@@ -55,21 +55,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: '#cf2b2b'
   },
 }));
-// interface Option {
-//   value: string;
-//   label: string;
-// }
-// const flavorOptions: Option[] = [
-//   { value: 'original', label: 'Original' },
-//   { value: 'root beer', label: 'Root Beer' },
-//   { value: 'orange', label: 'Orange' },
-//   { value: 'citrus', label: 'Citrus' },
-//   { value: 'cream', label: 'Cream' },
-//   { value: 'lemon-lime', label: 'Lemon-lime' },
-//   { value: 'cherry', label: 'Cherry' },
-//   { value: 'vanilla', label: 'Vanilla' },
-// ]
-// type Props = { setToken: React.Dispatch<React.SetStateAction<string | null>> }
+
 const Register = () => {
   const classes = useStyles();
   const [firstName, setFirstName] = useState('')
@@ -79,7 +65,6 @@ const Register = () => {
   const [confirmPassword, setConfirmPassword] = useState('')
   const [selectedFavoriteFlavor, setSelectedFavoriteFlavor] = useState('');
   const history = useHistory()
-  // const bg = '#cf2b2b'
   const txt = 'white'
   const blk = 'rgb(43, 43, 41)'
 
@@ -101,21 +86,8 @@ const Register = () => {
   const onConfirmPasswordChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setConfirmPassword(e.target.value as string);
   }
-  // const [shippingAddress, setShippingAddress] = useState('')
-  // const [creditCardNumber, setCreditCardNumber] = useState(0)
-  // const [creditCardType, setCreditCardType] = useState('')
-  // const [creditCardNameOnCard, setCreditCardNameOnCard] = useState('')
-  // const [city, setCity] = useState('')
-  // const [zip, setZip] = useState('')
-  // const [country, setCountry] = useState('')
-
 
   const [tryCreateUser] = useMutation(CREATE_USER)
-
-  // const handleCardChange: React.ChangeEventHandler<HTMLInputElement> = (event: React.ChangeEvent): void => {
-  //   const target = event.target as HTMLTextAreaElement
-  //   setCreditCardType(target.value)
-  // }
 
   const submitSignUp = async (event: React.SyntheticEvent) => {
     event.preventDefault()

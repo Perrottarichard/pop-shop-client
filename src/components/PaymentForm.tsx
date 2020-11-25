@@ -20,8 +20,6 @@ export default function PaymentForm(props: Props) {
   const {
     creditCardNameOnCard,
     setCreditCardNameOnCard,
-    // creditCardType,
-    // setCreditCardType,
     creditCardExpire,
     setCreditCardExpire,
     creditCardNumber,
@@ -31,7 +29,6 @@ export default function PaymentForm(props: Props) {
   } = useContext(CheckoutContext)
   const bg = '#cf2b2b'
   const txt = 'white'
-  // const blk = 'rgb(43, 43, 41)'
 
   const data = meQuery.data.me.paymentInfo
 
@@ -55,21 +52,6 @@ export default function PaymentForm(props: Props) {
     setActiveStep(activeStep + 1)
   }
 
-  // const onCreditCardNameOnCardChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-  //   setCreditCardNameOnCard(e.target.value as string);
-  // }
-  // const onCreditCardTypeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-  //   setCreditCardType(e.target.name);
-  // };
-  // const onCreditCardExpireChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-  //   setCreditCardExpire(e.target.value as string);
-  // }
-  // const onCreditCardNumberChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-  //   setCreditCardNumber(e.target.value as string);
-  // }
-  // const onCreditCardCVVChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-  //   setCreditCardCVV(e.target.value as string);
-  // }
   if (meQuery.loading) {
     return (
       <CheckoutSkeleton />
@@ -89,8 +71,6 @@ export default function PaymentForm(props: Props) {
               inputRef={register}
               name='creditCardNameOnCard'
               id="cardName"
-              // value={creditCardNameOnCard}
-              // onChange={onCreditCardNameOnCardChange}
               label="Name on card"
               fullWidth
               style={{ backgroundColor: txt }}
@@ -103,8 +83,6 @@ export default function PaymentForm(props: Props) {
               inputRef={register}
               name='creditCardNumber'
               id="cardNumber"
-              // value={creditCardNumber}
-              // onChange={onCreditCardNumberChange}
               label="Card number"
               fullWidth
               autoComplete="cc-number"
@@ -118,8 +96,6 @@ export default function PaymentForm(props: Props) {
               inputRef={register}
               name='creditCardExpire'
               id="expDate"
-              // value={creditCardExpire}
-              // onChange={onCreditCardExpireChange}
               label="Expiry date"
               fullWidth
               style={{ backgroundColor: txt }}
@@ -132,8 +108,6 @@ export default function PaymentForm(props: Props) {
               inputRef={register}
               name='creditCardCVV'
               id="cvv"
-              // value={creditCardCVV}
-              // onChange={onCreditCardCVVChange}
               label="CVV"
               helperText="Last three digits on signature strip"
               fullWidth

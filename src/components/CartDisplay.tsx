@@ -5,10 +5,7 @@ import { useQuery, useMutation } from '@apollo/client';
 import { GET_CART, REMOVE_CART } from '../queries';
 import { Cart } from '../types'
 import { Container, Button, Typography, CardActions, CardContent, Fade, Grid, Badge, LinearProgress } from '@material-ui/core';
-// import CartSkeleton from './CartSkeleton';
 import DeleteForeverIcon from '@material-ui/icons/DeleteForever';
-
-
 
 const TAX_RATE = 0.07;
 
@@ -95,11 +92,8 @@ const CartDisplay = () => {
 
         {/* //display total price and taxes */}
         <div style={{ display: 'block', textAlign: 'center', marginTop: 'auto', marginBottom: 'auto', height: 'auto', maxWidth: '360px', backgroundColor: blk, fontFamily: 'ubuntu', color: txt, marginLeft: 'auto', marginRight: 'auto' }}>
-          {/* <Paper style={{ width: '100%', marginBottom: 0, textAlign: 'center' }} elevation={2}> */}
-          {/* <Card variant="outlined" style={{ width: '100%', marginBottom: 20, backgroundColor: blk, }}> */}
           <Paper elevation={5}>
             <CardContent>
-
               <Typography style={{ fontFamily: 'ubuntu' }} variant='body1' gutterBottom >
                 Subtotal: ${subtotal.toFixed(2)}
                 <br />
@@ -115,10 +109,8 @@ const CartDisplay = () => {
               </Typography>
             </CardContent>
             <CardActions style={{ textAlign: 'center' }}>
-              {/* <Button variant='contained' style={{ marginRight: 'auto', color: txt, backgroundColor: 'gray' }} href='/'>Go Back</Button> */}
               <Button variant='contained' style={{ marginLeft: 'auto', marginRight: 'auto', color: txt, backgroundColor: bg }} href='/checkout'>Checkout</Button>
             </CardActions>
-            {/* </Card> */}
           </Paper>
         </div>
       </div >

@@ -34,7 +34,6 @@ export default function AddressForm(props: Props) {
   } = useContext(CheckoutContext)
   const bg = '#cf2b2b'
   const txt = 'white'
-  // const blk = 'rgb(43, 43, 41)'
 
   const data = meQuery.data.me.paymentInfo
   const preloadedValues = {
@@ -69,36 +68,6 @@ export default function AddressForm(props: Props) {
     )
   }
 
-  // const [shippingAddress, setShippingAddress] = useState('')
-  // const [city, setCity] = useState('')
-  // const [state, setState] = useState('')
-  // const [zip, setZip] = useState('')
-  // const [country, setCountry] = useState('')
-  // const [formFirstName, setFormFirstName] = useState('')
-  // const [formLastName, setFormLastName] = useState('')
-
-  // const onFormFirstNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-  //   setFormFirstName(e.target.value as string);
-  // }
-  // const onFormLastNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-  //   setFormLastName(e.target.value as string);
-  // }
-  // const onShippingAddressChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-  //   setShippingAddress(e.target.value as string);
-  // }
-  // const onCityChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-  //   setCity(e.target.value as string);
-  // }
-  // const onStateChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-  //   setState(e.target.value as string);
-  // }
-  // const onZipChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-  //   setZip(e.target.value as string);
-  // }
-  // const onCountryChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-  //   setCountry(e.target.value as string);
-  // }
-
   return (
     <React.Fragment>
       <form onSubmit={handleSubmit(onSubmit)}>
@@ -112,8 +81,6 @@ export default function AddressForm(props: Props) {
               required
               inputRef={register}
               id="firstName"
-              // value={formFirstName}
-              // onChange={onFormFirstNameChange}
               name="formFirstName"
               label='First name'
               fullWidth
@@ -125,8 +92,6 @@ export default function AddressForm(props: Props) {
               required
               variant='filled'
               inputRef={register}
-              // value={formLastName}
-              // onChange={onFormLastNameChange}
               id="lastName"
               name="formLastName"
               label='Last name'
@@ -140,8 +105,6 @@ export default function AddressForm(props: Props) {
               variant='filled'
               inputRef={register}
               id="address"
-              // value={shippingAddress}
-              // onChange={onShippingAddressChange}
               name="shippingAddress"
               label="Address"
               fullWidth
@@ -154,8 +117,6 @@ export default function AddressForm(props: Props) {
               variant='filled'
               inputRef={register}
               id="city"
-              // value={city}
-              // onChange={onCityChange}
               name="city"
               label="City"
               fullWidth
@@ -166,8 +127,6 @@ export default function AddressForm(props: Props) {
             <TextField
               variant='filled'
               style={{ backgroundColor: txt }}
-              // value={state}
-              // onChange={onStateChange}
               inputRef={register}
               id="state"
               name="state"
@@ -181,8 +140,6 @@ export default function AddressForm(props: Props) {
               variant='filled'
               inputRef={register}
               id="zip"
-              // value={zip}
-              // onChange={onZipChange}
               name="zip"
               label="Zip / Postal code"
               fullWidth
@@ -195,8 +152,6 @@ export default function AddressForm(props: Props) {
               variant='filled'
               inputRef={register}
               id="country"
-              // value={country}
-              // onChange={onCountryChange}
               name="country"
               label="Country"
               fullWidth

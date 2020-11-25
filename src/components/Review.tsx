@@ -42,9 +42,8 @@ export default function Review(props: ChProps) {
     creditCardNumber,
 
   } = useContext(CheckoutContext)
-  // const bg = '#cf2b2b'
+
   const txt = 'white'
-  // const blk = 'rgb(43, 43, 41)'
 
   const addresses = [shippingAddress, city, state, zip, country];
   const payments = [

@@ -117,16 +117,6 @@ const PrimarySearchAppBar = () => {
     }
   }, [cartItems.data])
 
-  // let products: [] = []
-  // const allProducts = useQuery(ALL_PRODUCTS)
-
-  // if (allProducts.loading) {
-  //   products = []
-  // } else {
-  //   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  //   products = allProducts.data.allProducts.filter((d: any) => d.brand.name.toString().toLowerCase().indexOf(search.toLowerCase()) !== -1)
-  // }
-
   const handleProfileMenuOpen = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
   };

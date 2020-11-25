@@ -8,7 +8,6 @@ import { Product } from '../types'
 import { Grid, Divider, Chip, Container, FormControl, InputLabel, Select, Badge, Fab } from '@material-ui/core';
 import Placeholder from '../assets/placeholder.jpg'
 import Paper from '@material-ui/core/Paper';
-// import ProductSkeleton from './ProductSkeleton';
 import { toast } from 'react-toastify';
 import { useMutation } from '@apollo/client'
 import { ADD_TO_CART } from '../queries'

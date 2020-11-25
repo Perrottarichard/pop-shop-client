@@ -26,7 +26,6 @@ const MyAccount = () => {
       <div id="timer" style={{ display: 'none', color: 'white' }}></div>
       <Container style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-evenly', height: 'auto', width: '100%', padding: 0 }}>
         {orders.map(o =>
-          // <Paper elevation={5} style={{ backgroundColor: blk, width: 'auto', height: 'auto' }}></Paper>
           <Container key={o.id} style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-evenly', maxWidth: '360px', marginTop: '20px', marginBottom: '20px', textAlign: 'left', backgroundColor: blk, paddingLeft: 10 }}>
             <div>
               <Grid container >
